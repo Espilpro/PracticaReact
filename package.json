@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@material-ui/core": "^4.10.1",
-    "convert-units": "^2.3.4"
+    "convert-units": "^2.3.4",
+    "react-flexbox": "^3.1.4",
+    "react-flexbox-grid": "^2.1.2"
   }
 }
