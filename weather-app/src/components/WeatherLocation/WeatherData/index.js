@@ -1,14 +1,6 @@
 import React from "react";
 import WeatherExtraInfo from "./WeatherInfo";
 import WeatherTemperature from "./WeatherTemperature";
-import {
-  CLOUD,
-  CLOUDY,
-  SUNNY,
-  RAIN,
-  SNOW,
-  WINDY,
-} from "../../../constants/weathers";
 import "./styles.css";
 import PropTypes from "prop-types";
 

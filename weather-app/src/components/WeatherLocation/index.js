@@ -5,15 +5,7 @@ import transformWeather from "../../services/transformWeather";
 import Location from "./Location";
 import WeatherData from "./WeatherData";
 import "./styles.css";
-import { SUNNY, WINDY } from "../../constants/weathers";
 import getUrlWeatherByCity from "../../services/getUrlWeatherByCity";
-
-const data = {
-  temperature: 5,
-  weatherState: SUNNY,
-  humidity: 10,
-  wind: "10 m/s",
-};
 
 class WeatherLocation extends Component {
   constructor(props) {
