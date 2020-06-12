@@ -25,8 +25,8 @@ class ForecastExtended extends Component {
       forecastData: null,
     };
   }
-  componentDidMount() {
-    const url_forecast = `${url_base_weather}?q=${this.props.city}&appid=${api_key}`;
+  updateCity = (city) => {
+    const url_forecast = `${url_base_weather}?q=${city}&appid=${api_key}`;
     fetch(url_forecast)
       .then((data) => data.json())
       .then((weather_data) => {
@@ -35,6 +35,15 @@ class ForecastExtended extends Component {
         console.log(forecastData);
         this.setState({ forecastData });
       });
+  };
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.city !== this.props.city) {
+      this.setState({ forecastData: null });
+      this.updateCity(nextProps.city);
+    }
+  }
+  componentDidMount() {
+    this.updateCity(this.props.city);
   }
   renderProgress = () => {
     return "Cargando Pronostico....";
