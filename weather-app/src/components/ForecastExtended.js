@@ -17,7 +17,6 @@ const days = [
   "Sabado",
   "Domingo",
 ];
-
 class ForecastExtended extends Component {
   constructor() {
     super();
